@@ -11,9 +11,8 @@ export const UserVerify = AsyncHandler( async(req,res,next)=>{
         const token = req.cookies?.accesstoken || req.header("Authorization")?.replace("Bearer ","")
         console.log(token);
         console.log("cannot get the access token");
-        console.log("header = ",req);
-        onsole.log(" ////////////////////////////////////////");
-        onsole.log("header = ",JSON.stringify(req.headers));
+        console.log(" ////////////////////////////////////////");
+        console.log("header = ",JSON.stringify(req.headers));
         console.log("=========================================");
         
         
