@@ -7,11 +7,13 @@ const PORT = process.env.PORT || 3000;
 app.use(
   cors({
     origin: (origin, callback) => {
-      callback(null, origin);
+      callback(null, origin || "*");
     },
     credentials: true,
   })
 );
+
+app.options("*", cors());
 
 app.use(express.json());
 app.use(cookieParser());
