@@ -6,14 +6,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;  
 app.use(
   cors({
-    origin: (origin, callback) => {
-      callback(null, origin || "*");
-    },
+    origin: "https://ai-chat-app-9.onrender.com",
     credentials: true,
   })
 );
-
-app.options("*", cors());
 
 app.use(express.json());
 app.use(cookieParser());
