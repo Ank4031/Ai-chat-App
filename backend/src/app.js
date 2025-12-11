@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;  
 app.use(
   cors({
-    origin: "https://ai-chat-app-9.onrender.com",
+    origin: "https://ai-chat-app-13.onrender.com",
     credentials: true,
   })
 );
